@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .back-button {
+            display: inline-block;
+            background: #0f62fe;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .back-button:hover {
+            background: #0353e9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recommended Products for {{ skin_type }} Skin</h1>
+    <p>User ID: {{ user_id }}</p>
+    <ul>
+        {% for product, suitable_for in recommendations %}
+        <li>{{ product }} - Suitable for: {{ suitable_for }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/" class="back-button">Back to Home</a>
+</body>
+</html>

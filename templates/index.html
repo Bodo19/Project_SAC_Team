@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cosmetics Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        button {
+            background: #0f62fe;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0353e9;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Cosmetics Recommendation System</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="skin_type">Skin Type:</label>
+            <select name="skin_type" id="skin_type" required>
+                <option value="Combination">Combination</option>
+                <option value="Dry">Dry</option>
+                <option value="Normal">Normal</option>
+                <option value="Oily">Oily</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit">Get Recommendations</button>
+        </div>
+    </form>
+</body>
+</html>
